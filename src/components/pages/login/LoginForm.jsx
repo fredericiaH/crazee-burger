@@ -1,6 +1,4 @@
-import { useState } from "react";
-
-export default function LoginPage(){
+export default function LoginForm(){
     //States
 
     const [name, setName] = useState("");
@@ -32,4 +30,5 @@ export default function LoginPage(){
         </form>
 
     )
+    
 }
