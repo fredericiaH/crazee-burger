@@ -19,6 +19,7 @@ export default function LoginPage(){
     const LoginPageStyled = styled.div`
         background: url("./images/F03burger.jpg") rgba(0, 0, 0, 0.7);
         background-size: cover;
+        background-position: center;
         height: 100vh;
         //width: 180vh;
         display: flex;

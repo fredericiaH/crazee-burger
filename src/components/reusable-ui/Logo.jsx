@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components"
+import {theme} from "../theme"
 
 export default function Logo() {
   return (
@@ -12,8 +13,21 @@ export default function Logo() {
 }
 
 const LogoStyled = styled.div`
-    background: blue;
-    
+    //background: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: ${theme.colors.primary_burger};
+    //transform: scale(0.5);
 
+    h1{
+      font-weight: lighter;
+      font-family: 'Amatic', cursive;
+    }
+
+    img{
+      width: 15%;
+      padding: 2%;
+    }
 `
 
