@@ -5,9 +5,9 @@ import {theme} from "../theme"
 export default function Logo() {
   return (
     <LogoStyled>
-      <h1>CRAZEE</h1>
+      <h1>crazee</h1>
       <img src="./images/F03 logo-orange.png" alt="icone burger" />
-      <h1>BURGER</h1>
+      <h1>burger</h1>
     </LogoStyled>
   )
 }
@@ -18,11 +18,13 @@ const LogoStyled = styled.div`
     align-items: center;
     justify-content: center;
     color: ${theme.colors.primary_burger};
-    //transform: scale(0.5);
+    text-transform: uppercase;
+    transform: scale(1.5);
 
     h1{
       font-weight: lighter;
       font-family: 'Amatic', cursive;
+      font-size: 36px;
     }
 
     img{
