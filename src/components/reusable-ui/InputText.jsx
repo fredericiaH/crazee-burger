@@ -3,14 +3,22 @@ import styled from 'styled-components'
 
 export default function InputText({value, onChange, className, Icon, ...extraProps}) {
   return( 
-        <div className={className}>
+        <InputTextStyled className={className}>
             {Icon}
             <input onChange={onChange} type="text" {...extraProps}/>
-        </div>
+        </InputTextStyled>
   ) 
 }
 
-const InputTestStyled = styled.div`
+const InputTextStyled = styled.div`
+        background-color: #fff;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding: 18px 24px;
+        margin: 18px 0;
+
+
     input{
         border: none;
         font-size: 15px;
@@ -18,15 +26,6 @@ const InputTestStyled = styled.div`
         
     }
 
-
-    .input-with-icon{
-        background-color: #fff;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        padding: 18px 24px;
-        margin: 18px 0;
-    }
 
     .icon{
         font-size: 15px;
