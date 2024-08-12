@@ -6,6 +6,7 @@ import { theme } from "../../theme";
 import { BsPersonCircle } from "react-icons/bs";
 import { IoChevronForward } from "react-icons/io5";
 import InputText from "../../reusable-ui/InputText";
+import PrimaryButton from "../../reusable-ui/PrimaryButton";
 
 
 
@@ -48,16 +49,16 @@ export default function LoginForm(){
                     Icon={<BsPersonCircle className="icon" />
                     }
                     placeholder={"Entrez votre prenom..."}
-                    required
-                    className={"input-with-icon"}
-
-
-
+                    required   
                  /> 
-                <button className="button-with-icon">
-                    <span>Acceder à mon espace</span>
-                    <IoChevronForward className="icon-forward" />
-                </button>
+
+                 <PrimaryButton
+                    Icon={<IoChevronForward className="icon-forward" />}
+                    Text={<span>Acceder à mon espace</span>}
+                    ClassName={'button-with-icon'}
+                 
+                 />
+
             </div>
         </LoginFormStyled>
     )
@@ -96,39 +97,5 @@ const LoginFormStyled = styled.form`
     }
 
     
-
-
-
-    .button-with-icon{
-        display: inline-flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        
-        
-        padding: 18px;
-        border-radius: 5px;
-        font-size: 15px;
-        font-weight: ${theme.weights.heavy};
-        color: white;
-        background-color: ${theme.colors.primary_burger};
-        border: 1px solid ${theme.colors.primary_burger} ;
-
-        &:hover:not(:disabled) {
-        background-color: white;
-        color: #ff9f1b;
-        transition: all 200ms ease-out;
-    }
-    }
-
-   
-    .icon-forward{
-        justify-content: center;
-        align-items: center;
-        font-size: 15px;
-        margin-left: 10px;
-        white-space: nowrap;
-    }
 
 `
