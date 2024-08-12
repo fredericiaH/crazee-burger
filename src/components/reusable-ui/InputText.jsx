@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function InputText({value, onChange, className, Icon, ...extraProps}) {
+export default function InputText({value, onChange, Icon, ...extraProps}) {
   return( 
-        <InputTextStyled className={className}>
+        <InputTextStyled>
             {Icon}
             <input onChange={onChange} type="text" {...extraProps}/>
         </InputTextStyled>
@@ -22,8 +22,7 @@ const InputTextStyled = styled.div`
     input{
         border: none;
         font-size: 15px;
-        color: #17161a;
-        
+        color: #17161a;   
     }
 
 
