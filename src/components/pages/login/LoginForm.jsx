@@ -32,6 +32,7 @@ export default function LoginForm(){
         setName(event.target.value);
         
     }
+
     //Affichage
 
 
@@ -56,8 +57,8 @@ export default function LoginForm(){
                     Icon={<IoChevronForward className="icon-forward" />}
                     Text={<span>Acceder à mon espace</span>}
                     ClassName={'button-with-icon'}
-                 
                  />
+
 
             </div>
         </LoginFormStyled>
@@ -71,31 +72,38 @@ const LoginFormStyled = styled.form`
     min-width: 400px;
     margin: 0px auto;
     padding: 2.5rem 2rem;
-    border-radius: 5px;
+    border-radius: ${theme.borderRadius.round};
     font-family: "Amatic SC", cursive;
-    
     
     
 
     h2{
-        color: #8e8b8b;
         margin: 20px 10px 10px;
-        color: white;
-        font-size: 36px;
-        
+        color: ${theme.colors.white};
+        font-size: ${theme.fonts.size.P4};
+        font-weight: ${theme.fonts.weights.light};
+
     }
 
     h1{
-        color: white;
+        color: ${theme.colors.white};
         font-size: 47px;
+        font-weight: ${theme.fonts.weights.light};
     }
     
 
     hr{
         border: 1.5px solid ${theme.colors.redSecondary};
-        margin-bottom: 40px;
+        margin-bottom: ${theme.gridUnit * 5}px;
     }
 
+    .icon-forward{
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        margin-left: 10px;
+        white-space: nowrap;
+    }
     
 
 `

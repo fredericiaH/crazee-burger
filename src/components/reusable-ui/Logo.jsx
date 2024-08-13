@@ -24,7 +24,7 @@ const LogoStyled = styled.div`
     h1{
       font-weight: lighter;
       font-family: 'Amatic', cursive;
-      font-size: 36px;
+      font-size: ${theme.fonts.size.P4};
     }
 
     img{

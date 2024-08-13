@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { theme } from '../theme'
 
-export default function PrimaryButton({ Icon, Text, ClassName, ...extraProps}) {
+export default function PrimaryButton({ Icon, Text, ...extraProps}) {
 
   return (
-    <PrimaryButtonStyled className = {ClassName}>
+    <PrimaryButtonStyled>
         {Text}
         {Icon}
     </PrimaryButtonStyled>
@@ -25,7 +25,7 @@ const PrimaryButtonStyled = styled.button`
     padding: 18px;
     border-radius: 5px;
     font-size: 15px;
-    font-weight: ${theme.weights.heavy};
+    font-weight: ${theme.fonts.weights.heavy};
     color: white;
     background-color: ${theme.colors.primary_burger};
     border: 1px solid ${theme.colors.primary_burger} ;
@@ -37,13 +37,6 @@ const PrimaryButtonStyled = styled.button`
     }
     
 
-   
-    .icon-forward{
-        justify-content: center;
-        align-items: center;
-        font-size: 15px;
-        margin-left: 10px;
-        white-space: nowrap;
-    }
+  
 
 `
