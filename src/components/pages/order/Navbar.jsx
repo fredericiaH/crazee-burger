@@ -3,13 +3,17 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { theme } from "../../theme";
 import { BsPersonCircle } from 'react-icons/bs';
+import NavbarRightSide from './NavbarRightSide';
+import NavbarLeftSide from './NavbarLeftSide';
 
 export default function Navbar({ username }) {
     
   return (
     <NavbarStyled>
-        <div>LeftSide</div>
-        <div className='RightSide'>
+        <NavbarLeftSide />
+        <NavbarRightSide username={username}/>
+
+        {/* <div className='RightSide'>
           <div className='profil'>
             <h1>Hey, <span>{username}</span></h1>
             <Link to="/">
@@ -19,7 +23,7 @@ export default function Navbar({ username }) {
           <div className='icon-profil'>
             <BsPersonCircle />
           </div>
-        </div>
+        </div> */}
     </NavbarStyled>
   )
 }
@@ -27,72 +31,51 @@ export default function Navbar({ username }) {
 const NavbarStyled = styled.div`
    
     background: blue;
-    height: 15%;
-    /*background: blue;
+    height: 10%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;*/
+    justify-content: space-between;
     
-
-  
-
-    .RightSide{
-      
-      /*
-      display: flex;
+    
+    /* .RightSide{
+      display: flex; 
+      flex-direction: row;
+      padding-right: 5%;
       align-items: center;
-      margin-right: 70px;*/
-      
-      
+      justify-content: center;
+
 
       .icon-profil{
-        height: auto;
-        display: flex;
-        height: 100%;
+        margin-top: 10px;
+        height: 36px;
+        width: 36px;
+        padding-left: 8px;
+        
         font-size: ${theme.fonts.size.P4};
         color: ${theme.colors.greyBlue};
-      }
 
-      .profil{
-        
-        display: flex;
-        flex-direction: column;
-        color: ${theme.colors.greyBlue};
-        //text-align: right;
       }
       
-
-      span{
-        color: ${theme.colors.primary};
-      }
-
-      
-
       h1{
-        font-size: 16px ;
-        font-weight: ${theme.fonts.weights.regular};
-        margin: 0;
+        font-size: 16px;
+        margin-bottom: 0%;
+        font-weight:${theme.fonts.weights.regular};
         color: ${theme.colors.greyBlue};
-        margin-right: 10px;
-        text-align: right;
-        padding-bottom: 5px;
-        padding-left: 3px;
+
+        span{
+          color: ${theme.colors.primary};
+          font-weight:${theme.fonts.weights.bold};
+        }
       }
-      
+
       a{
         font-size: ${theme.fonts.size.XXS};
         color: ${theme.colors.greyBlue};
         font-weight: ${theme.fonts.weights.medium};
         text-decoration: none;
-        //position: relative;
-        bottom: 2px;
-        padding-top: 5px;
-
-        
-        
       }
+      
 
-
+      
     }
-  
+   */
 `
