@@ -14,8 +14,6 @@ export default function OrderPage() {
     <OrderPageStyled>
       <div className='contenaire'> 
         <Navbar username={username}/>
-        {/*<div className='navbar'>navbar</div>*/}
-        {/*<Main />*/}
         <div className='main'>main</div>
       </div>
         
@@ -40,14 +38,14 @@ const OrderPageStyled = styled.div`
     margin-top: 1%;
     width: 95%;
     height: 95%;
+    justify-content: center;
     
   }
 
-  
 
   .main{
     background: green;
-    height: 85%;
+    height: 90%;
   }
 
   
