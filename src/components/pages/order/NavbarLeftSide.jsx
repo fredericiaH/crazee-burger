@@ -5,7 +5,7 @@ import styled from 'styled-components'
 export default function NavbarLeftSide() {
   return (
     <NavbarLeftSideStyled>
-        <Logo className='dimension' />
+        <Logo onClick={() => window.location.reload()} className='logo-order-page' />
     </NavbarLeftSideStyled>
   )
 }
@@ -20,12 +20,7 @@ const NavbarLeftSideStyled = styled.div`
     
     
 
-    /* .dimension{
-      
-
-      h1{
-        font-size: 16px;
-      }
-
-    } */
+    .logo-order-page{
+      cursor: pointer;
+    }
 `

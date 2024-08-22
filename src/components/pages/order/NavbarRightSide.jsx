@@ -48,6 +48,7 @@ const NavbarRightSideStyled = styled.div`
         margin-bottom: 0%;
         font-weight:${theme.fonts.weights.regular};
         color: ${theme.colors.greyBlue};
+        padding-left: 4px;
 
         span{
           color: ${theme.colors.primary};
