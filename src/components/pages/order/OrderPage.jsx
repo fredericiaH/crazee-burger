@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import styled from 'styled-components';
 import Navbar from './Navbar';
 import Main from './Main';
+import { theme } from '../../theme';
 //import Nav from '../../reusable-ui/Nav';
 
 
@@ -14,7 +15,7 @@ export default function OrderPage() {
     <OrderPageStyled>
       <div className='contenaire'> 
         <Navbar username={username}/>
-        <div className='main'>main</div>
+        <Main />
       </div>
         
       
@@ -34,19 +35,18 @@ const OrderPageStyled = styled.div`
   
 
   .contenaire{
-    border: 2px solid red;
+    
+    background: red;
     margin-top: 1%;
     width: 95%;
     height: 95%;
     justify-content: center;
+    border-radius: ${theme.borderRadius.extraRound};
     
   }
 
 
-  .main{
-    background: green;
-    height: 90%;
-  }
+  
 
   
 `

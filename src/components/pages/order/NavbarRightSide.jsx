@@ -27,9 +27,9 @@ const NavbarRightSideStyled = styled.div`
  
       display: flex; 
       flex-direction: row;
-      padding-right: 5%;
       align-items: center;
       justify-content: center;
+      padding-right: 5%;
 
 
       .icon-profil{
@@ -60,6 +60,10 @@ const NavbarRightSideStyled = styled.div`
         color: ${theme.colors.greyBlue};
         font-weight: ${theme.fonts.weights.medium};
         text-decoration: none;
+
+        &:hover{
+          text-decoration: underline;
+        }
       }
       
 

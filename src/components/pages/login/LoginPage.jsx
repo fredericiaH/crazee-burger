@@ -8,7 +8,7 @@ export default function LoginPage(){
 
     return(
         <LoginPageStyled>
-            <Logo />
+            <Logo className='logo-login-page' />
             <LoginForm />
         </LoginPageStyled>
 
@@ -35,13 +35,10 @@ export default function LoginPage(){
         bottom: 0;
         //z-index: -1;
 
-        
 
+        .logo-login-page{
+        transform: scale(1.5);
+    }
 
-        /*::before{
-            content: "avant";
-            
-            
-            
-        }*/
     `
+    
