@@ -10,7 +10,7 @@ export default function Navbar({ username }) {
     
   return (
     <NavbarStyled>
-        <NavbarLeftSide />
+        <NavbarLeftSide  username={username} />
         <NavbarRightSide username={username}/>
     </NavbarStyled>
   )
