@@ -25,5 +25,5 @@ const NavbarStyled = styled.div`
     padding: 0 20px;
     border-top-left-radius: ${theme.borderRadius.extraRound};
     border-top-right-radius: ${theme.borderRadius.extraRound};
-
+    border-bottom: 1px solid ${theme.colors.greyLight};
 `
