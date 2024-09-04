@@ -2,19 +2,18 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { theme } from '../../../theme'
 import {fakeMenu1, fakeMenu2} from '../../../../fakeData/fakeMenu';
+import Product from './Product';
 
 export default function Menu() {
 
   const [menu, setMenu] = useState(fakeMenu2);
-  // console.log(menu)
+ 
 
   return (
     <MenuStyled className='menu'>
-      {/* <div className='menu'> */}
-        {menu.map((products, index) => {
-          return <div key={index} className='produit'>{products.title}</div>
+        {menu.map( (products, index) => { 
+          return <Product imageSource={products.imageSource} title={products.title} price={products.price} /> 
         })}
-      {/* </div> */}
     </MenuStyled>
   )
 }
@@ -27,14 +26,26 @@ const MenuStyled = styled.div`
     grid-row-gap: 60px;
     padding: 50px 50px 150px;
     justify-items: center;
+    box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset;
    
 
     
     .produit{
-      //box-shadow: -8px 8px 20px 0px rgb(0 0 0 / 20%);
       background: red;
       width: 240px;
       height: 330px;
+
+
+      .image{
+        border: 1px solid fuchsia;
+        width: 100px;
+        height: auto;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
       
     }
 
