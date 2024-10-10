@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { theme } from '../../../theme'
 import {fakeMenu1, fakeMenu2} from '../../../../fakeData/fakeMenu';
 import Product from './Product';
+import { formatPrice } from '../../../../utils/maths'; 
+import Card from '../../../reusable-ui/Card';
 
 export default function Menu() {
 
@@ -12,7 +14,8 @@ export default function Menu() {
   return (
     <MenuStyled className='menu'>
         {menu.map( (products, index) => { 
-          return <Product imageSource={products.imageSource} title={products.title} price={products.price} /> 
+          // return <Product key={products.id} imageSource={products.imageSource} title={products.title} leftDescription={formatPrice(products.price)} />
+          return <Card key={products.id} imageSource={products.imageSource} title={products.title} leftDescription={formatPrice(products.price)} />
         })}
     </MenuStyled>
   )
@@ -30,23 +33,5 @@ const MenuStyled = styled.div`
    
 
     
-    .produit{
-      background: red;
-      width: 240px;
-      height: 330px;
-
-
-      .image{
-        border: 1px solid fuchsia;
-        width: 100px;
-        height: auto;
-        img{
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-      
-    }
 
 `
