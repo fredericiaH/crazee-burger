@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { theme } from '../theme'
 
-export default function PrimaryButton({ Icon, Text, ...extraProps}) {
+export default function PrimaryButton({ Icon, Text, className, ...extraProps}) {
 
   return (
-    <PrimaryButtonStyled>
+    <PrimaryButtonStyled className={className}>
         {Text}
         {Icon}
     </PrimaryButtonStyled>

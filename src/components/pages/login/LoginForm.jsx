@@ -56,7 +56,6 @@ export default function LoginForm(){
                  <PrimaryButton
                     Icon={<IoChevronForward className="icon-forward" />}
                     Text={<span>Acceder à mon espace</span>}
-                    ClassName={'button-with-icon'}
                  />
 
 
