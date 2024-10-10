@@ -1,12 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BsPersonCircle } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { theme } from '../../../theme'
+import ToggleButton from '../../../reusable-ui/ToggleButton';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import ToastAdmin from './ToastAdmin'
 
 export default function NavbarRightSide({username}) {
+
+  const [isModeAdmin, setIsModeAdmin] = useState(false);
+
+  
+  const toastNotification = () =>{
+    if(!isModeAdmin){
+      toast.info("Mode admin activé", {
+
+        theme: "dark",
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+    }
+    setIsModeAdmin(!isModeAdmin)
+  }
+
   return (
     <NavbarRightSideStyled>
+      <div className="ecart" >
+        <ToggleButton 
+          labelIfChecked="DESACTIVER LE MODE ADMIN" 
+          labelIfUnchecked="ACTIVER LE MODE ADMIN"
+          onToggle={toastNotification}
+        />
+        <ToastAdmin />
+      </div>
+      
       <div className='profil'>
         <h1>Hey, <span>{username}</span></h1>
         <Link to="/">
@@ -31,6 +65,13 @@ const NavbarRightSideStyled = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-right: 50px;
+
+   
+    
+
+    .ecart{
+      margin-right: 50px;
+    }
 
     .profil{
       text-align: right;
