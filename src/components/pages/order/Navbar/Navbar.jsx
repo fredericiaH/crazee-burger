@@ -1,16 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { theme } from "../../../theme";
 import { BsPersonCircle } from 'react-icons/bs';
 import NavbarRightSide from './NavbarRightSide';
 import NavbarLeftSide from './NavbarLeftSide';
+import { theme } from '../../../theme';
+
 
 export default function Navbar({ username }) {
     
   return (
     <NavbarStyled>
-        <NavbarLeftSide  username={username} />
+        <NavbarLeftSide  username={username} />  
         <NavbarRightSide username={username}/>
     </NavbarStyled>
   )
