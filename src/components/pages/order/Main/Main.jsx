@@ -8,7 +8,10 @@ export default function Main() {
   return (
     <MainStyled>
       {/* <Basket /> */}
-      <Menu  />
+      <div className='admin-and-menu'>
+        <Menu  />
+        <div className='admin'>Admin</div>
+      </div>
     </MainStyled>
   )
 }
@@ -22,5 +25,24 @@ const MainStyled = styled.div`
   display: grid;
   /* grid-template-columns: 25% 75%; */
   grid-template-columns: 1fr;
-  overflow-y: scroll;
+  
+
+
+  .admin-and-menu{
+    position: relative;
+    overflow-y: hidden;
+    display: grid;
+    border-bottom-left-radius: ${theme.borderRadius.extraRound};
+    border-bottom-right-radius: ${theme.borderRadius.extraRound};
+    
+    .admin{
+      background: red;
+      height: 250px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+  
 `
